@@ -74,6 +74,7 @@ a:active {
   width: 48px;
   height: 48px;
   margin-right: 10px;
+  object-fit: cover;
 }
 
 /* Post publish date */
@@ -98,15 +99,17 @@ a:active {
 
 /* Post excerpt */
 .content .pre-wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
   min-width: 10px;
-  position: relative;
 }
 
 .content .pre-wrapper pre {
   line-height: 1.5rem;
   overflow: hidden;
+  /* word-break: normal; */
+  word-wrap: break-word;
 }
 
 .trim {
@@ -250,5 +253,17 @@ a:active {
   }
   .actions .favourite span {
     display: none;
+  }
+}
+
+@media screen and (max-width: 315px) {
+  .header .time {
+    display: none;
+  }
+  .content .poster-wrapper {
+    display: none;
+  }
+  .actions-wrapper a i {
+    font-size: 1rem;
   }
 }
